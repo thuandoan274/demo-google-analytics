@@ -9,6 +9,7 @@ import { AngularFireModule } from '@angular/fire';
 import { MessagingService } from './service/messaging.service';
 import { environment } from '../environments/environment';
 import { AsyncPipe } from '../../node_modules/@angular/common';
+import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 
 @NgModule({
   declarations: [
@@ -21,8 +22,9 @@ import { AsyncPipe } from '../../node_modules/@angular/common';
     AngularFireAuthModule,
     AngularFireMessagingModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule,
   ],
-  providers: [MessagingService,AsyncPipe],
+  providers: [MessagingService, AsyncPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
